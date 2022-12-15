@@ -40,20 +40,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <ul class="question-list"><?php
-            foreach ($googleData as $objGoogleData) { ?>
-            <li><?php
-                foreach ($objGoogleData as $key => $value) {
-                    if ($key === 'question') {
-                        echo "<h1>" . $value . "</h1>";
-                    } elseif ($key === 'answer') {
-                        echo $value;
-                    };
-                };?>
-            </li><?php    
-            } ?>
-        </ul>
-    </div>
+    <header>
+        <img class="logo" src="https://www.dafont.com/forum/attach/orig/6/7/672156.png?1" alt="">
+        <span>Privacy e termini</span>
+        <hr>
+    </header>
+    <main>
+        <div class="container">
+            <ul class="question-list"><?php
+                foreach ($googleData as $objGoogleData) { ?>
+                <li><?php
+                    foreach ($objGoogleData as $key => $value) {
+                        if ($key === 'question') {
+                            echo "<h1>" . $value . "</h1>";
+                        } elseif ($key === 'answer') {
+                            echo $value;
+                        };
+                    };?>
+                </li><?php
+                } ?>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>
