@@ -47,18 +47,13 @@
     </header>
     <main>
         <div class="container">
-            <ul class="question-list"><?php
-                foreach ($googleData as $objGoogleData) { ?>
+            <ul class="question-list">
                 <li><?php
-                    foreach ($objGoogleData as $key => $value) {
-                        if ($key === 'question') {
-                            echo "<h1>" . $value . "</h1>";
-                        } elseif ($key === 'answer') {
-                            echo $value;
-                        };
+                    foreach ($googleData as $q_a) {
+                        echo "<h1>{$q_a['question']}</h1>";
+                        echo $q_a['answer'];
                     };?>
-                </li><?php
-                } ?>
+                </li>
             </ul>
         </div>
     </main>
