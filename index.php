@@ -47,13 +47,13 @@
     </header>
     <main>
         <div class="container">
-            <ul class="question-list">
-                <li><?php
-                    foreach ($googleData as $q_a) {
-                        echo "<h1>{$q_a['question']}</h1>";
-                        echo $q_a['answer'];
-                    };?>
-                </li>
+            <ul class="question-list"><?php
+                foreach ($googleData as $q_a) { ?>
+                    <li> <?php
+                    echo "<h1>{$q_a['question']}</h1>";
+                    echo $q_a['answer']; ?>
+                </li> <?php
+                };?>
             </ul>
         </div>
     </main>
